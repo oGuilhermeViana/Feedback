@@ -1,0 +1,134 @@
+:root {
+  font-size: 62.5%;
+
+  --Orange: hsl(25, 97%, 53%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Heavy-Grey: hsl(240, 13%, 24%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  list-style: none;
+  color: var(--Light-Grey);
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+}
+
+.box {
+  width: 36rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 3rem;
+  background: var(--Dark-Blue);
+  border-radius: 1rem;
+}
+
+.box img {
+  background-color: var(--Heavy-Grey);
+  padding: 1rem;
+  clip-path: circle();
+}
+
+.box h2 {
+  font-size: 1.8rem;
+  padding-block: 2rem;
+  color: var(--White);
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 2rem;
+}
+
+.note li {
+  color: var(--Light-Grey);
+  font-weight: 700;
+  background: var(--Heavy-Grey);
+  padding: 1.5rem;
+  clip-path: circle();
+  cursor: pointer;
+}
+
+.note li:hover {
+  background-color: var(--Orange);
+}
+
+.note li.selected {
+  background-color: var(--Orange);
+}
+
+button {
+  color: var(--White);
+  background-color: var(--Orange);
+  border: none;
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 30rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  cursor: pointer;
+}
+
+.box.show{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.thanks {
+  opacity: 0;
+  visibility: hidden;
+
+  width: 36rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 3rem;
+  background: var(--Dark-Blue);
+  border-radius: 1rem;
+
+  text-align: center;
+}
+
+.thanks img {
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.noteOf {
+  display: inline;
+  background: var(--Heavy-Grey);
+  color: var(--Orange);
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  font-weight: 700;
+}
+
+.thanks h2 {
+  font-size: 1.8rem;
+  color: var(--White);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.thanks.show{
+  opacity: 1;
+  visibility: visible;
+}
